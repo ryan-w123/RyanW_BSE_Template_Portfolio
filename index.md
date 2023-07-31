@@ -9,7 +9,7 @@ You should comment out all portions of your portfolio that you have not complete
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
 |:--:|:--:|:--:|:--:|
-| FirstName LastInitialOnly | School Name | Electrical Engineering | Incoming Senior
+| Ryan W. | Greenwich High School | Not Sure | Incoming Sophomore
 
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 
@@ -43,15 +43,9 @@ For your second milestone, explain what you've worked on since your previous mil
 
 # First Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mhgGyL9YesA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CaCazFBhYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-For your first milestone, describe what your project is and how you plan to build it. You can include:
-- An explanation about the different components of your project and how they will all integrate together
-- Technical progress you've made so far
-- Challenges you're facing and solving in your future milestones
-- What your plan is to complete your project
+An explanation about the different components of your project and how they will all integrate together. My project is creating a plant monitoring system that’s able to detect the current temperature, humidity, intensity of light and soil moisture of plants. To start, in my Milestone 1, I created a connection between the ESP8266, my Arduino(R3) board, and the Blynk application. The ESP8266 acts as a middleman between the communication of the Arduino R3 board and the Blynk application. The ESP chip is a wifi chip that allows the connection between the circuit and the R3 board, allowing the R3 board to deliver the necessary information such as soil moisture information. In my future milestones, I'd like to use these features to automate, the water pump. Yet, one of the challenges occurring very frequently, is the physical cable connection between the R3 board and the ESP causing larger problems of the functionality of the actual ESP wifi connection. But, either I'll go around this problem, or figure out how to solve this problem for future milestones. 
 
 # Schematics 
 Here's where you'll put images of your schematics. [Tinkercad](https://www.tinkercad.com/blog/official-guide-to-tinkercad-circuits) and [Fritzing](https://fritzing.org/learning/) are both great resoruces to create professional schematic diagrams, though BSE recommends Tinkercad becuase it can be done easily and for free in the browser. 

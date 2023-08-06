@@ -1,16 +1,11 @@
 Plant Monitor 
 
-Replace this text with a brief description (2-3 sentences) of your project. This description should draw the reader in and make them interested in what you've built. You can include what the biggest challenges, takeaways, and triumphs from completing the project were. As you complete your portfolio, remember your audience is less familiar than you are with all that your project entails!
+The plant monitor project is a circuit that takes specific information, such as the current temperature and intensity of light in the room, as well as the humidity and soil moisture of plants. Allow me to demonstrate my journey to you through this portfolio; it went from an incomplete circuit that had to overcome the frustrations of loose wires and the ESP8266(WIFI) chip, all the way to a circuit that's efficiently and simply able to provide plant and room information that's necessary for the plant, as well as the use of a water pump to allow water to flow through a tube all the way to the plant. This project taught me that there's always an alternate path that we can take to reach a solution/goal which will make the project all the more unique. 
 
-You should comment out all portions of your portfolio that you have not completed yet, as well as any instructions:
-```HTML 
-<!--- This is an HTML comment in Markdown -->
-<!--- Anything between these symbols will not render on the published site -->
-```
+
 
 | **Engineer** | **School** | **Area of Interest** | **Grade** |
-|:--:|:--:|:--:|:--:|
-| Ryan W. | Greenwich High School | Not Sure | Incoming Sophomore
+| Ryan W. | Greenwich High School | Mechanical Engineer | Incoming Sophomore |
 
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**
 

@@ -1,6 +1,6 @@
 Plant Monitor 
 
-Watering plants is growing to be a hard task that not many can keep up with. Allow me to demonstrate my journey of a plant monitor project that makes life 10x easier; it went from an incomplete circuit that had to overcome the frustrations of loose wires and the ESP8266(WIFI) chip, all the way to a circuit that's efficient and simple; now, the push of a button allows the water pump to send water to a plant, and all plant information is sent to a screen that you can view. This project taught me that there's always an alternate path that we can take to reach a solution/goal which will make the project all the more unique and stronger. 
+Watering plants is growing to be a hard task that not many can keep up with. Allow me to demonstrate my journey of a plant monitor project that makes life a lot easier; it went from an incomplete circuit that had to overcome the frustrations of loose wires and the ESP8266(WIFI) chip, all the way to a circuit that's efficient and simple. Now, the push of a button allows the water pump to send water to a plant, and all plant information(room temperature, humidity, intensity of light, and soil moisture) is sent to a screen that you can view. This project taught me that there's always an alternate path that we can take to reach a solution/goal which will make the project all the more unique and stronger. 
 
 
 | Ryan W. | Greenwich High School | Mechanical Engineer | Incoming Sophomore |
@@ -25,9 +25,8 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 # Second Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
+<iframe width="560" height="315" src="https://www.youtube.com/embed/r4cs4SHCONk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/y3VAmNlER5Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
 - Technical details of what you've accomplished and how they contribute to the final goal
@@ -35,9 +34,11 @@ For your second milestone, explain what you've worked on since your previous mil
 - Previous challenges you faced that you overcame
 - What needs to be completed before your final milestone 
 
+
+The path of a WIFI-driven project has completely changed its trajector during my Milestone 2. 
 # First Milestone
 
-My project is creating a plant monitoring system that’s able to detect the current temperature, humidity, intensity of light and soil moisture of plants. To start, in my milestone 1, I created a connection between the ESP8266, my Arduino(R3) board, and the Blynk application. The ESP8266 acts as a middleman between the communication of the Arduino R3 board and the Blynk application. The ESP chip is a wifi chip that allows the connection between the circuit and the R3 board, allowing the R3 board to deliver the necessary information such as soil moisture information to be viewed on the Blynk application. In my future milestones, I'd like to use these features to be automated using the information from the circuit, which will then determine when the water pump needs to be on or off. Yet, one of the challenges occurring very frequently is the physical cable connections between the R3 board and the ESP causing larger problems with the functionality of the actual ESP wifi connection. In the future, I might have to stop using the ESP8266 due to its recurring problems, so either I'll go around this problem, or figure out how to solve this problem for future milestones. 
+In milestone 1, I created a connection between the ESP8266, my Arduino(R3) board, and the Blynk application. The ESP8266 acts as a middleman between the communication of the Arduino R3 board and the Blynk application. The ESP chip is a wifi chip that allows the connection between the circuit and the R3 board, allowing the R3 board to deliver the necessary information such as soil moisture information to be viewed on the Blynk application. In my future milestones, I'd like to use these features to be automated using the information from the circuit, which will then determine when the water pump needs to be on or off. Yet, one of the challenges occurring very frequently is the physical cable connections between the R3 board and the ESP causing larger problems with the functionality of the actual ESP wifi connection. In the future, I might have to stop using the ESP8266 due to its recurring problems, so either I'll go around this problem, or figure out how to solve this problem for future milestones. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mhgGyL9YesA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 

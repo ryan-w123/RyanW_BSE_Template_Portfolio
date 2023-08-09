@@ -1,10 +1,8 @@
 Plant Monitor 
 
-The plant monitor project is a circuit that takes specific information, such as the current temperature and intensity of light in the room, as well as the humidity and soil moisture of plants. Allow me to demonstrate my journey to you through this portfolio; it went from an incomplete circuit that had to overcome the frustrations of loose wires and the ESP8266(WIFI) chip, all the way to a circuit that's efficiently and simply able to provide plant and room information that's necessary for the plant, as well as the use of a water pump to allow water to flow through a tube all the way to the plant. This project taught me that there's always an alternate path that we can take to reach a solution/goal which will make the project all the more unique. 
+Watering plants is growing to be a hard task that not many can keep up with. Allow me to demonstrate my journey of a plant monitor project that makes life 10x easier; it went from an incomplete circuit that had to overcome the frustrations of loose wires and the ESP8266(WIFI) chip, all the way to a circuit that's efficient and simple; now, the push of a button allows the water pump to send water to a plant, and all plant information is sent to a screen that you can view. This project taught me that there's always an alternate path that we can take to reach a solution/goal which will make the project all the more unique and stronger. 
 
 
-
-| **Engineer** | **School** | **Area of Interest** | **Grade** |
 | Ryan W. | Greenwich High School | Mechanical Engineer | Incoming Sophomore |
 
 **Replace the BlueStamp logo below with an image of yourself and your completed project. Follow the guide [here](https://tomcam.github.io/least-github-pages/adding-images-github-pages-site.html) if you need help.**

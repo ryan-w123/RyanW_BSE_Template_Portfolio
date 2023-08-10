@@ -25,17 +25,12 @@ For your final milestone, explain the outcome of your project. Key details to in
 
 # Second Milestone
 
+The path of a WIFI-driven project has completely changed its trajectory during my Milestone 2. After I realized that I wouldn't be able to use a WIFI connection to display the information, I had to switch up my way of displaying all the information; so I used an OLED screen, which very clearly displays all the necessary information(room temperature, light, humidity, and soil moisture), meaning that for the base project, I added sensors for each of these parts. Furthermore, I added a button that is able to control the pump that I've added for the water delivery to the plant. Also, the code had to be drastically changed, as well as the addition of many new libraries because now I'm sending the information to the OLED screen instead of BLYNK. This was another big challenge that came into account because it was tough to figure out and make sure that everything was changed correctly, especially with a new coding language. Before my final milestone, I need to be able to map out each of the values to a relative change for the regular human to be able to understand it. What's so surprising about this idea of mapping out the values, as well as in general the whole project, is how simple it all seems until it becomes so complex and is a much tougher task to complete. 
+
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/r4cs4SHCONk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
-For your second milestone, explain what you've worked on since your previous milestone. You can highlight:
-- Technical details of what you've accomplished and how they contribute to the final goal
-- What has been surprising about the project so far
-- Previous challenges you faced that you overcame
-- What needs to be completed before your final milestone 
-
-
-The path of a WIFI-driven project has completely changed its trajector during my Milestone 2. 
 # First Milestone
 
 In milestone 1, I created a connection between the ESP8266, my Arduino(R3) board, and the Blynk application. The ESP8266 acts as a middleman between the communication of the Arduino R3 board and the Blynk application. The ESP chip is a wifi chip that allows the connection between the circuit and the R3 board, allowing the R3 board to deliver the necessary information such as soil moisture information to be viewed on the Blynk application. In my future milestones, I'd like to use these features to be automated using the information from the circuit, which will then determine when the water pump needs to be on or off. Yet, one of the challenges occurring very frequently is the physical cable connections between the R3 board and the ESP causing larger problems with the functionality of the actual ESP wifi connection. In the future, I might have to stop using the ESP8266 due to its recurring problems, so either I'll go around this problem, or figure out how to solve this problem for future milestones. 

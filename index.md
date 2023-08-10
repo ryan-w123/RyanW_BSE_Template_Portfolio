@@ -53,7 +53,7 @@ Milestone2_Schematic
 
 Milestone3_Schematic
 
-![Milestone 3 Schematic](/RyanW_BSE_Template_Portfolio/Milestone3.png)
+![Milestone 3 Schematic](/RyanW_BSE_Template_Portfolio/Milestone 3.png)
 
 
 # Code

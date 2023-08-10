@@ -44,17 +44,173 @@ Here's where you'll put images of your schematics. [Tinkercad](https://www.tinke
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
+#include <DHT.h>
+// dht DHT;
+#define DHT11_PIN 9
+#define DHTYPE DHT11
+#define lightPin A0
+#define moisturePin A1
+#define pumpA 8
+#define pumpB 7
+
+//pumpA
+DHT dht(DHT11_PIN, DHTYPE);
+//Assigning the button a digital value
+int inbtn = 12;  
+int btnVal = HIGH;
+int oldBtnVal;
+int currentState = LOW;
+
+//pumpB
+//Assigning the button a digital value
+int inbtn2 = 2;
+int btnVal2 = HIGH;
+int oldBtnVal2;
+int currentState2 = LOW;
+
+//OLED SCREEN
+#include <SPI.h>
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+#include <Fonts/FreeSans9pt7b.h>
+#include <Fonts/FreeMonoOblique9pt7b.h>
+#define SCREEN_WIDTH 128  // OLED display width, in pixels
+#define SCREEN_HEIGHT 64  // OLED display height, in pixels
+
+#define OLED_RESET 4
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+
+
+double roomHumidity = 0;
+double roomTemperature = 0;
+
+```
+These are all the initializations necessary in the code. If these initializations weren't present, then the information wouldn't be able to pick up the information from the sensors connected to the circuit. 
+
+
+```c++
+int readMoisture() {
+//both these commands are calling the sensor from the initializations and then finding out these values. 
+  return analogRead(moisturePin);
+}
+
+int readLight() {
+  return analogRead(lightPin);
+}
+
+
+bool readDHT() {
+//Both are using the DHT to get the values from the sensors
+  roomHumidity = dht.readHumidity();
+  delay(100);
+  roomTemperature = dht.readTemperature();
+  return true;
+}
+
+void myTimerEvent() {
+  bool chk = readDHT();
+  int light = readLight();
+  int moisture = readMoisture();
+  if (chk == true) {
+//printing out the values of the Room temp and humidity to the OLED screen
+    display.setTextColor(WHITE);
+    display.setTextSize(1);
+    display.setFont();
+    display.setCursor(0, 43);
+    display.println("Room Temp  :");
+    display.setCursor(80, 43);
+    display.println(roomTemperature);
+    display.setCursor(114, 43);
+    display.println("C");
+    display.setCursor(0, 56);
+    display.println("Humidity   :");
+    display.setCursor(80, 56);
+    display.println(roomHumidity);
+  }
+
+//Printing out the light and moisture to specific positions on the OLED 
+
+  display.setTextColor(WHITE);
+  display.setTextSize(1);
+  display.setFont();
+  display.setCursor(0, 16);
+  display.println("Light      :");
+  display.setCursor(80, 16);
+  display.println(light);
+  display.setCursor(0, 30);
+  display.println("Moisture   :");
+  display.setCursor(80, 30);
+  display.println(moisture);
+
+
+  //pumpA
+//"edge detection" --> when the button is being turned from on to off 
+  oldBtnVal = btnVal;
+  btnVal = digitalRead(inbtn);
+  //Button Press from high --> low --> that turns the pump on or off
+  if (btnVal == LOW && oldBtnVal == HIGH) {
+    if (currentState == HIGH) {
+      Serial.println("current state = low");
+      currentState = LOW;
+    } else if (currentState == LOW) {
+      currentState = HIGH;
+      Serial.println("current state = high");
+    } else {
+      //Self-error check
+      Serial.println("The button has an undefined value");
+    }
+    digitalWrite(pumpA, currentState);
+  }
+//same thing but for second pump
+  //pumpB
+  oldBtnVal2 = btnVal2;
+  //whether the button has been pressed or not
+  btnVal2 = digitalRead(inbtn2);
+  //Button Press from high --> low
+  if (btnVal2 == LOW && oldBtnVal2 == HIGH) {
+      if (currentState2 == HIGH) {
+      Serial.println("current state 2 is high ");
+      currentState2 = LOW;
+    }
+    else if (currentState2 == LOW) {
+      currentState2 = HIGH;
+    }
+    else {
+      Serial.println("The button has an undefined value");
+    }
+    digitalWrite(pumpB, currentState2);
+  }
+}
+
+
+```
+This part is the most important in the code. To start off, the code starts off by reading each of the values from the sensors. Then the start of the myTimerEvent() is what allows the user to view the information on the OLED screen. Next in the myTimerEvent() is how the buttons control the pump, and allow it to function. Essentially what we are doing is that we are taking into consideration how long a user might hold the button, so what we have coded here is that even if the button is held for a long time, the button will have the same function(either turning the pump on or off). This represents a concept called edge detection. For example, if I were to hold the button for a long time, then it will only output one answer of on or off, but without edge detection, the value of whether the pump is on or off will be inconsistent and unknown. Ultimately, this allows the user to turn the pump on or off with consistency and without any problems. 
+
+```c++
 void setup() {
-  // put your setup code here, to run once:
-  Serial.begin(9600);
-  Serial.println("Hello World!");
+  // Debug console
+  Serial.begin(115200);
+  dht.begin();
+  if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3c)) {  // Address  0x3D for 128x64
+    Serial.println(F("SSD1306 allocation failed"));
+  }
+
+  pinMode(inbtn, INPUT_PULLUP);
+  pinMode(inbtn2, INPUT_PULLUP);
+  pinMode(pumpA, OUTPUT);
+  pinMode(pumpB, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  display.clearDisplay();
+  myTimerEvent();  // Initiates timer function
+  display.display();
+  delay(200);
 }
 ```
+To end, the setup() function allows each of the previous functions to run in order to work due to C++ in Arduino being objected oriented programming. Furthermore, the dht.begin() is crucial in this case because if it isn't called, then the dht won't be able to startup, meaning we won't be able to see the information provided by the dht; if it isn't working, the following error statement will print. Lastly, the loop is simply going through each of the functions repeatedly to update each of the values on the OLED screen. 
+
 
 # Bill of Materials
 Here's where you'll list the parts in your project. To add more rows, just copy and paste the example rows below.
@@ -65,11 +221,3 @@ Don't forget to place the link of where to buy each component inside the quotati
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
 | Item Name | What the item is used for | $Price | <a href="https://www.amazon.com/Arduino-A000066-ARDUINO-UNO-R3/dp/B008GRTSV6/"> Link </a> |
-
-# Other Resources/Examples
-One of the best parts about Github is that you can view how other people set up their own work. Here are some past BSE portfolios that are awesome examples. You can view how they set up their portfolio, and you can view their index.md files to understand how they implemented different portfolio components.
-- [Example 1](https://trashytuber.github.io/YimingJiaBlueStamp/)
-- [Example 2](https://sviatil0.github.io/Sviatoslav_BSE/)
-- [Example 3](https://arneshkumar.github.io/arneshbluestamp/)
-
-To watch the BSE tutorial on how to create a portfolio, click here.

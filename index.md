@@ -43,13 +43,13 @@ Milestone1_Schematic
 
 ![Milestone 1 Schematic](/RyanW_BSE_Template_Portfolio/Milestone1_Schematic.png)
 
-⬇️⬇️⬇️⬇️⬇️⬇️⬇️
+#⬇️⬇️⬇️⬇️⬇️⬇️⬇️
 
 Milestone2_Schematic
 
 ![Milestone 2 Schematic](/RyanW_BSE_Template_Portfolio/Milestone2.png)
 
-⬇️⬇️⬇️⬇️⬇️⬇️⬇️
+#⬇️⬇️⬇️⬇️⬇️⬇️⬇️
 
 Milestone 3.png
 

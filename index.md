@@ -44,52 +44,6 @@ Here's where you'll put images of your schematics. [Tinkercad](https://www.tinke
 Here's where you'll put your code. The syntax below places it into a block of code. Follow the guide [here]([url](https://www.markdownguide.org/extended-syntax/)) to learn how to customize it to your project needs. 
 
 ```c++
-#include <DHT.h>
-// dht DHT;
-#define DHT11_PIN 9
-#define DHTYPE DHT11
-#define lightPin A0
-#define moisturePin A1
-#define pumpA 8
-#define pumpB 7
-
-//pumpA
-DHT dht(DHT11_PIN, DHTYPE);
-//Assigning the button a digital value
-int inbtn = 12;  
-int btnVal = HIGH;
-int oldBtnVal;
-int currentState = LOW;
-
-//pumpB
-//Assigning the button a digital value
-int inbtn2 = 2;
-int btnVal2 = HIGH;
-int oldBtnVal2;
-int currentState2 = LOW;
-
-//OLED SCREEN
-#include <SPI.h>
-#include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
-#include <Fonts/FreeSans9pt7b.h>
-#include <Fonts/FreeMonoOblique9pt7b.h>
-#define SCREEN_WIDTH 128  // OLED display width, in pixels
-#define SCREEN_HEIGHT 64  // OLED display height, in pixels
-
-#define OLED_RESET 4
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
-
-
-double roomHumidity = 0;
-double roomTemperature = 0;
-
-```
-These are all the initializations necessary in the code. If these initializations weren't present, then the information wouldn't be able to pick up the information from the sensors connected to the circuit. 
-
-
-```c++
 int readMoisture() {
 //both these commands are calling the sensor from the initializations and then finding out these values. 
   return analogRead(moisturePin);

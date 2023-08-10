@@ -11,16 +11,15 @@ Watering plants is growing to be a hard task that not many can keep up with. All
   
 # Final Milestone
 
-**Don't forget to replace the text below with the embedding for your milestone video. Go to Youtube, click Share -> Embed, and copy and paste the code to replace what's below.**
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/F7M7imOVGug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 For your final milestone, explain the outcome of your project. Key details to include are:
 - What you've accomplished since your previous milestone
 - What your biggest challenges and triumphs were at BSE
 - A summary of key topics you learned about
-- What you hope to learn in the future after everything you've learned at BSE
+- What do you hope to learn in the future after everything you've learned at BSE
 
+The last milestone was a success! In my last milestone, I added multiple different elements to the project in order to make it look more organized and complex. So to make it look more organized, I created a housing using an old tissue box. I then cut holes in the side of the box in order for components such as the soil moisture module, the USB cable, and the two pumps to be able to come out of the box for their use. Then, since it's a tissue box, there's also a hole at the top of the box, which allows the sensors to pick up on the necessary information, and then the OLED screen that I had recently added to the circuit to view all that information, can be seen since the OLED is sticking through the top. This OLED is definitely one of the most triumphant components that I'm very proud of in my project while the biggest challenge was coding everything for the OLED screen and changing it from the Blynk application to the OLED. SO ultimately, I learned a lot about the functionality of multiple different sensors, coding in Arduino IDE, and how breadboards work. After I leave BSE, I would like to continue learning about different parts and gaining a deep understanding of them so that I can continue to make new projects and/or add to my current project, which allowed me to have a great experience at BSE. 
 
 
 # Second Milestone

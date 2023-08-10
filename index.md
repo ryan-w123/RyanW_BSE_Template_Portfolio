@@ -41,7 +41,7 @@ In milestone 1, I created a connection between the ESP8266, my Arduino(R3) board
 
 Milestone1_Schematic.png
 
-![Milestone 1 Schematic](/gh-pages/Milestone1_Schematic.png)
+![Milestone 1 Schematic](/RyanW_BSE_Template_Portfolio/Milestone1_Schematic.png)
 
 
 # Code
